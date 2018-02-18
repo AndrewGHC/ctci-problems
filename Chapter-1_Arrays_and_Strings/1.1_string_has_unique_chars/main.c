@@ -19,7 +19,8 @@ int strIsUnique(char *str)
    return 0;
 }
 
-int main(int argc, char* argv[]) {
+int main()
+{
   char inputString[64];
   scanf("%s", inputString);
   return strIsUnique(inputString);
