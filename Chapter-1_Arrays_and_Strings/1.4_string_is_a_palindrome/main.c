@@ -14,13 +14,13 @@ int main(int argc, char *argv[])
   }
 
   char *str = argv[1];
-  char *reversedStr = (char *) malloc(strlen(str));
+  char *reversed_str = (char *) malloc(strlen(str));
 
   for (int i = strlen(str); i >= 0; i--) {
-    strncat(reversedStr, &str[i], 1);
+    strncat(reversed_str, &str[i], 1);
   }
 
-  if (strcmp(str, reversedStr) == 0) {
+  if (strcmp(str, reversed_str) == 0) {
     printf("%s is a palindrome", str);
     return 0;
   }

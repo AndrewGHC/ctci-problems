@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 // Check if there is a 1 char difference between two strings
@@ -17,13 +16,13 @@ int main(int argc, char *argv[])
     return 1;
   }
 
-  char *firstStr = argv[1];
-  char *secondStr = argv[2];
+  char *first_str = argv[1];
+  char *second_str = argv[2];
 
-  char *largerString = strlen(firstStr) > strlen(secondStr) ? firstStr : secondStr;
-  char *smallerString = strlen(firstStr) > strlen(secondStr) ? secondStr : firstStr;
+  char *larger_string = strlen(first_str) > strlen(second_str) ? first_str : second_str;
+  char *smaller_string = strlen(first_str) > strlen(second_str) ? second_str : first_str;
   // If one string is > 1 char larger or < 1 char smaller, return error
-  if (strlen(largerString) % strlen(smallerString) > 1) {
+  if (strlen(larger_string) % strlen(smaller_string) > 1) {
     printf("Greater than 1 char difference");
     return 1;
   }

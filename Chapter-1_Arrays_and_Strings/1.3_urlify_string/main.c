@@ -15,31 +15,31 @@ int main(int argc, char *argv[])
 
   char *str = argv[1];
   // Count how many spaces there are in the string
-  int numberOfSpaces = 0;
+  int nmbr_spaces = 0;
   for (int i = 0; i < strlen(str); i++) {
     if (str[i] == ' ') {
-      numberOfSpaces = numberOfSpaces + 1;
+      nmbr_spaces = nmbr_spaces + 1;
     }
   }
 
   // If there are no spaces, return error
-  if (numberOfSpaces == 0) {
+  if (nmbr_spaces == 0) {
     printf("This string contains no spaces");
     return 1;
   }
 
   // Allocate buffer for the new string (' ' will become '%20')
-  int bufferSize = strlen(str) + numberOfSpaces * 2;
-  char *newStr = (char *) malloc(bufferSize);
+  int buf_size = strlen(str) + nmbr_spaces * 2;
+  char *new_str = (char *) malloc(buf_size);
 
   for (int i = 0; i < strlen(str); i++) {
     if (str[i] == ' ') {
-      strcat(newStr, "%20");
+      strcat(new_str, "%20");
     } else {
-      strncat(newStr, &str[i], 1);
+      strncat(new_str, &str[i], 1);
     }
   }
 
-  printf("%s", newStr);
+  printf("%s", new_str);
   return 0;
 }

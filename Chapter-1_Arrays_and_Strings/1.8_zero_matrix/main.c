@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 void print_matrix(const int m, const int n, const int matrix[m][n])
 {
@@ -37,7 +35,7 @@ int main()
     {1, 2, 0, 4},
     {5, 6, 7, 8}
   };
-  printf("\nMatrix to be zeroed:\n\n");
+  printf("Matrix to be zeroed:\n\n");
   print_matrix(m, n, matrix);
 
   // Clone matrix
